@@ -32,7 +32,12 @@ var_dump($pluto);
 $topolino = new PremUser('topolino', 'mouse', 25, 'premium');
 $topolino->setDiscount();
 $topolino->getDiscount();
+$topolino->setDisc(18,50);
 var_dump($topolino);
+
+
+
+
 
 ?>
 
@@ -57,6 +62,11 @@ var_dump($topolino);
   <hr>
   <h4><?php echo $topolino->getFullName(); ?></h4>
   <h5><?php echo 'Hai uno sconto del: ' . $topolino->discount . '%'; ?></h5>
+  <p><?php echo $topolino->getDisc(); ?></p>
+  <hr>
+
+
+
   
 </body>
 </html>

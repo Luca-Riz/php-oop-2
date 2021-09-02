@@ -2,12 +2,16 @@
 
 <?php
 
+require_once 'ScontoTutti.php';
+
 class User {
   protected $name;
   protected $surname;
   protected $age;
   public $discount = 0;
 
+  use ScontoTutti;
+  
   function __construct($_name, $_surname, $_age){
     $this->name = $_name;
     $this->surname = $_surname;
@@ -23,7 +27,7 @@ class User {
       $this->discount = 30;
     } elseif ($this->age < 18) {
       $this->discount = 40;
-    }
+    } 
   }
 
   public function getDiscount(){
