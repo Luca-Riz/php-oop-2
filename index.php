@@ -17,23 +17,23 @@ require_once 'PremUser.php';
 $pippo = new User('pippo', 'rossi', 61);
 $pippo->setDiscount();
 $pippo->getDiscount();
-var_dump($pippo);
+// var_dump($pippo);
 
 $paperino = new User('paperino', 'gialli', 15);
 $paperino->setDiscount();
 $paperino->getDiscount();
-var_dump($paperino);
+// var_dump($paperino);
 
 $pluto = new PremUser('pluto', 'verdi', 61, 'premium');
 $pluto->setDiscount();
 $pluto->getDiscount();
-var_dump($pluto);
+// var_dump($pluto);
 
 $topolino = new PremUser('topolino', 'mouse', 25, 'premium');
 $topolino->setDiscount();
 $topolino->getDiscount();
 $topolino->setDisc(18,50);
-var_dump($topolino);
+// var_dump($topolino);
 
 
 
