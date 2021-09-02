@@ -6,7 +6,7 @@ require_once 'User.php';
 
 class PremUser extends User {
 
-  private $premium;
+  protected $premium;
 
   function __construct($_name, $_surname, $_age, $_premium){
     parent::__construct($_name, $_surname, $_age);

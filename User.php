@@ -3,9 +3,9 @@
 <?php
 
 class User {
-  public $name;
-  public $surname;
-  public $age;
+  protected $name;
+  protected $surname;
+  protected $age;
   public $discount = 0;
 
   function __construct($_name, $_surname, $_age){
