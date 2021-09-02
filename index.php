@@ -11,14 +11,28 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
 
 <?php
 
-require_once 'User.php';
-// require_once 'PremUser.php';
+// require_once 'User.php';
+require_once 'PremUser.php';
 
-$pippo = new User('pippo', 'rossi', 10);
+$pippo = new User('pippo', 'rossi', 61);
 $pippo->setDiscount();
 $pippo->getDiscount();
 var_dump($pippo);
 
+$paperino = new User('paperino', 'gialli', 15);
+$paperino->setDiscount();
+$paperino->getDiscount();
+var_dump($paperino);
+
+$pluto = new PremUser('pluto', 'verdi', 61, 'premium');
+$pluto->setDiscount();
+$pluto->getDiscount();
+var_dump($pluto);
+
+$topolino = new PremUser('topolino', 'mouse', 25, 'premium');
+$topolino->setDiscount();
+$topolino->getDiscount();
+var_dump($topolino);
 
 ?>
 
@@ -34,6 +48,15 @@ var_dump($pippo);
 
   <h4><?php echo $pippo->getFullName(); ?></h4>
   <h5><?php echo 'Hai uno sconto del: ' . $pippo->discount . '%'; ?></h5>
+  <hr>
+  <h4><?php echo $paperino->getFullName(); ?></h4>
+  <h5><?php echo 'Hai uno sconto del: ' . $paperino->discount . '%'; ?></h5>
+  <hr>
+  <h4><?php echo $pluto->getFullName(); ?></h4>
+  <h5><?php echo 'Hai uno sconto del: ' . $pluto->discount . '%'; ?></h5>
+  <hr>
+  <h4><?php echo $topolino->getFullName(); ?></h4>
+  <h5><?php echo 'Hai uno sconto del: ' . $topolino->discount . '%'; ?></h5>
   
 </body>
 </html>
