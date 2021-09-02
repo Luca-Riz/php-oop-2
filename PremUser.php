@@ -10,7 +10,7 @@ class PremUser extends User {
 
   function __construct($name, $surname, $age, $premium){
     parent::__construct($name, $surname, $age);
-    this->premium = $_premium;
+    $this->premium = $_premium;
   }
 
   // funzione polimorfa

@@ -11,6 +11,29 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
 
 <?php
 
-class Product {
+require_once 'User.php';
+// require_once 'PremUser.php';
+
+$pippo = new User('pippo', 'rossi', 10);
+$pippo->setDiscount();
+$pippo->getDiscount();
+var_dump($pippo);
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libreria</title>
+</head>
+<body>
+
+  <h4><?php echo $pippo->getFullName(); ?></h4>
+  <h5><?php echo 'Hai uno sconto del: ' . $pippo->discount . '%'; ?></h5>
   
-}
+</body>
+</html>

@@ -6,12 +6,12 @@ class User {
   public $name;
   public $surname;
   public $age;
-  public $discount;
+  public $discount = 0;
 
-  function __construct($name, $surname, $age){
+  function __construct($_name, $_surname, $_age){
     $this->name = $_name;
     $this->surname = $_surname;
-    $this->age = $age;
+    $this->age = $_age;
   }
 
   public function getFullName(){
@@ -19,9 +19,9 @@ class User {
   }
 
   public function setDiscount(){
-    if($age > 60){
+    if($this->age > 60){
       $this->discount = 30;
-    } elseif ($age < 18) {
+    } elseif ($this->age < 18) {
       $this->discount = 40;
     }
   }
