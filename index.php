@@ -14,7 +14,7 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
 // require_once 'User.php';
 require_once 'PremUser.php';
 
-$pippo = new User('pippo', 'rossi', 61);
+$pippo = new User('pippo', 'rossi', 'ciao');
 $pippo->setDiscount();
 $pippo->getDiscount();
 // var_dump($pippo);

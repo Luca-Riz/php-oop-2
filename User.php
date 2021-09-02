@@ -15,8 +15,20 @@ class User {
   function __construct($_name, $_surname, $_age){
     $this->name = $_name;
     $this->surname = $_surname;
-    $this->age = $_age;
+    
+    $this->setAge($_age);
   }
+
+  public function setAge($_age){
+    if(is_numeric($_age) && $_age > 0 && $_age < 120) {
+        $this->age = $_age;
+    } elseif(!is_numeric($_age)){
+        throw new Exception('Non è un numero');
+    } else {
+        throw new Exception('Fuori range');
+    }
+   
+}
 
   public function getFullName(){
     return $this->name . ' ' . $this->surname;
