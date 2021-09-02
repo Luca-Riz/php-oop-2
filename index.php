@@ -14,10 +14,14 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
 // require_once 'User.php';
 require_once 'PremUser.php';
 
-$pippo = new User('pippo', 'rossi', 'ciao');
-$pippo->setDiscount();
-$pippo->getDiscount();
-// var_dump($pippo);
+$pippo = new User('pippo','rossi');
+try {
+    $pippo->setAge('ciao');
+} catch (Exception $e) {
+    // var_dump(get_class_methods($e));
+    // var_dump($e);
+    echo 'Errore nel campo anni: ' . $e->getMessage();
+}
 
 $paperino = new User('paperino', 'gialli', 15);
 $paperino->setDiscount();

@@ -12,11 +12,9 @@ class User {
 
   use ScontoTutti;
   
-  function __construct($_name, $_surname, $_age){
+  function __construct($_name, $_surname){
     $this->name = $_name;
     $this->surname = $_surname;
-    
-    $this->setAge($_age);
   }
 
   public function setAge($_age){
